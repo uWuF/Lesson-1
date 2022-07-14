@@ -1,6 +1,6 @@
 gender = "male"
 print(gender)
-city = "Saint-Petersburg"
+city = "Spb"
 print(city)
 food = input("What kind of food do you like?: ")
 print(f'Awesome, I like {food} too!')
