@@ -1,9 +1,5 @@
-number = int(input("Введите время в секундах: "))
+n = list(input("Введите элементы списка через запятую: ").split(', '))
 
-hour = number // 3600
-
-minute = (number - ((number // 3600) * 3600)) // 60
-
-second = number - (((number // 3600) * 3600) + (minute * 60))
-
-print(f"{hour:02}:{minute:02}:{second:02}")
+for i in range(0, len(n)-1, 2):
+    n[i], n[i+1] = n[i+1], n[i]
+print(n)
