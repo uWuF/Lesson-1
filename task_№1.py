@@ -1,8 +1,9 @@
-gender = "male"
-print(gender)
-city = "Spb"
-print(city)
-food = input("What kind of food do you like?: ")
-print(f'Awesome, I like {food} too!')
-number = int(input("How many meals do you have a day?: "))
-print(f"{number} - good boy")
+def my_f(n_1, n_2):
+    if n_2 == 0:
+        print('Делить на 0 нельзя!')
+        return
+    result = n_1 / n_2
+    print(result)
+
+
+my_f(int(input('Введите числитель: ')), int(input('Введите знаминатель: ')))
