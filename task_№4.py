@@ -1,12 +1,6 @@
-n = int(input('Введите число: '))
+def my_func(num_1, num_2):
+    result = num_1 ** num_2
+    return result
 
-a = n % 10
 
-b = 0
-
-while n > 0:
-    b = (n // 10) % 10
-    n = n // 10
-    if b > a:
-        a = b
-print(a)
+print(my_func(float(input('Введите действительное число: ')), int(input('Введите целое отрицательное число: '))))
