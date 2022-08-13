@@ -1,9 +1,7 @@
-number = int(input("Введите время в секундах: "))
+def info(**kwargs):
+    return ' '.join(kwargs.values())
 
-hour = number // 3600
 
-minute = (number - ((number // 3600) * 3600)) // 60
-
-second = number - (((number // 3600) * 3600) + (minute * 60))
-
-print(f"{hour:02}:{minute:02}:{second:02}")
+print(info(name=input('Введите своё имя: '), surname=input('Введите свою фамилию: '),
+           year=input('Введите год рождения: '), city=input('В каком городе вы живёте: '),
+           email=input('Напишите свою электронную почту: '), phone=input('Напишите свой номер телефона: ')))
