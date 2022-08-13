@@ -1,10 +1,13 @@
-a = int(input('Сколько пробежал в первый день?: '))
+def my_func():
+    for word in input('Введите слова через пробел маленькими латинскими буквами: ').split():
+        a = 0
+        for i in word:
+            if 97 <= ord(i) <= 122:
+                a += 1
+        if a == len(word):
+            print(word.title())
+        else:
+            print(f'{word} - Вводите только маленькие буквы')
 
-b = int(input('Какого результата хочется достичь?: '))
 
-c = 1
-
-while a <= b:
-    a = a * 0.1 + a
-    c += 1
-print(c)
+my_func()
