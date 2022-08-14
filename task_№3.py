@@ -1,3 +1,3 @@
-n = (input('Введите число: '))
+my_list = [i for i in range(20, 241) if i % 20 == 0 or i % 21 == 0]
 
-print(int(n) + int(n + n) + int(n + n + n))
+print(my_list)
