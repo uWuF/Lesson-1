@@ -1,10 +1,14 @@
-a = int(input('Сколько пробежал в первый день?: '))
+from itertools import count, cycle
 
-b = int(input('Какого результата хочется достичь?: '))
+my_list = ['A', 'B', 'C']
 
-c = 1
+for i in count(3):
+    print(i, end=' ')
+    if i >= 10:
+        print()
+        break
 
-while a <= b:
-    a = a * 0.1 + a
-    c += 1
-print(c)
+for x, y in enumerate(cycle(my_list)):
+    print(y, end=' ')
+    if x >= 10:
+        break
