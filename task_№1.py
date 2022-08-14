@@ -1,8 +1,12 @@
-gender = "male"
-print(gender)
-city = "Spb"
-print(city)
-food = input("What kind of food do you like?: ")
-print(f'Awesome, I like {food} too!')
-number = int(input("How many meals do you have a day?: "))
-print(f"{number} - good boy")
+from sys import argv
+
+
+def salary():
+    try:
+        time, money_per_hour, bonus = map(float, argv[1:])
+        print(f'Salary - {time * money_per_hour + bonus}')
+    except ValueError:
+        print('Вводите только числа!')
+
+
+salary()
