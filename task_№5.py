@@ -1,14 +1,9 @@
-gain = float(input('Введите прибыль фирмы: '))
+from functools import reduce
 
-spent = float(input('Введите траты фирмы: '))
+my_list = [i for i in range(100, 1001, 2)]
 
-a = gain - spent
+multip = reduce(lambda x, y: x * y, my_list)
 
-b = 0
+print(my_list)
 
-if a < 0:
-    a = spent - gain
-    print(f'Убыток составил {a} рублей.')
-else:
-    b = int(input('Введите количество сотрудников: '))
-    print(f'Прибыль на одного сотрудника составила: {a / b} рублей.')
+print(f'Результат перемножения чисел - {multip}')
